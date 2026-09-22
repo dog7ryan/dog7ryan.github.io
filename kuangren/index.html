@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狂人 - 狂人精神解析与心理观察档案</title>
+    <meta name="description" content="狂人 - 深度解析精神异常、天才与疯癫的边界，提供心理档案、历史案例与科学观察指南。">
+    <meta name="keywords" content="狂人, 精神分析, 心理观察, 天才与疯子, 历史狂人, 精神疾病">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #c3073f;
+            --accent-hover: #ff4d6d;
+            --border: #333;
+            --font-serif: 'Georgia', 'Times New Roman', serif;
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 15, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, #2a0a14 0%, var(--bg-color) 70%);
+        }
+
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Content Grid */
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin: 60px 0 30px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-color: var(--accent);
+        }
+
+        .card-img-placeholder {
+            height: 180px;
+            background-color: #2a2a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 3rem;
+            position: relative;
+        }
+
+        .card-img-placeholder::after {
+            content: 'CASE';
+            position: absolute;
+            font-size: 0.8rem;
+            background: var(--accent);
+            padding: 2px 8px;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-tag {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .card-link {
+            color: var(--text-main);
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .card-link::after {
+            content: '→';
+            margin-left: 8px;
+            transition: margin-left 0.2s;
+        }
+
+        .card-link:hover::after {
+            margin-left: 15px;
+        }
+
+        /* Analysis Section (Two Columns) */
+        .analysis-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .analysis-text p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            text-align: justify;
+        }
+
+        .sidebar {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-family: var(--font-serif);
+        }
+
+        .checklist li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .checklist li::before {
+            content: '•';
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 80px 0;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .faq-question:hover {
+            background-color: #222;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-muted);
+            background-color: #151517;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.9rem;
+            padding-top: 20px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .analysis-layout {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none; /* Simplify for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">狂人<span>.</span></a>
+        <nav>
+            <ul>
+                <li><a href="#archive">历史档案</a></li>
+                <li><a href="#analysis">精神解析</a></li>
+                <li><a href="#symptoms">症状指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>探索理性的边缘<br>与疯狂的深渊</h1>
+            <p>“疯癫不是一种疾病，而是一种被历史放逐的真理。”<br>在这里，我们审视那些被主流社会视为“狂人”的现象，分析其背后的心理机制、社会成因与历史回响。</p>
+            <a href="#archive" class="btn">开始观察</a>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <div class="container">
+        <div class="stats">
+            <div class="stat-item">
+                <h3>23</h3>
+                <p>历史典型案例</p>
+            </div>
+            <div class="stat-item">
+                <h3>8</h3>
+                <p>核心精神分析维度</p>
+            </div>
+            <div class="stat-item">
+                <h3>150+</h3>
+                <p>观察文献收录</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>客观中立视角</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Archive -->
+    <section class="container" id="archive">
+        <h2 class="section-title">历史档案：被遗忘的狂人</h2>
+        <div class="grid">
+            <article class="card">
+                <div class="card-img-placeholder">01</div>
+                <div class="card-body">
+                    <span class="card-tag">文学与疯癫</span>
+                    <h3 class="card-title">鲁迅《狂人日记》中的隐喻</h3>
+                    <p class="card-desc">深入解析鲁迅笔下“狂人”的精神状态，探讨“吃人”礼教背后的社会心理与存在主义恐惧。</p>
+                    <a href="#" class="card-link">阅读档案</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-placeholder">02</div>
+                <div class="card-body">
+                    <span class="card-tag">历史人物</span>
+                    <h3 class="card-title">尼采：查拉图斯特拉的最后独白</h3>
+                    <p class="card-desc">分析尼采哲学中“超人”与“疯癫”的界限，解读其晚年精神崩溃与天才思想的关联。</p>
+                    <a href="#" class="card-link">阅读档案</a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-img-placeholder">03</div>
+                <div class="card-body">
+                    <span class="card-tag">社会观察</span>
+                    <h3 class="card-title">边缘群体的狂欢与异化</h3>
+                    <p class="card-desc">现代社会中，当个体无法适应群体规则时，这种“狂人”状态如何成为一种防御机制。</p>
+                    <a href="#" class="card-link">阅读档案</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section class="container" id="analysis">
+        <h2 class="section-title">深度解析：狂人的心理图谱</h2>
+        <div class="analysis-layout">
+            <div class="analysis-text">
+                <h3>什么是“狂人”心理？</h3>
+                <p>在心理学与社会学视野中，“狂人”往往指代那些偏离社会常规认知、表现出极端情绪或思维障碍的个体。这并非单纯的病理描述，更是一种对现实秩序的挑战。</p>
+                <p>从精神分析的角度来看，狂人状态可能源于潜意识的压抑、创伤的爆发或认知框架的重构。他们眼中的世界可能比常人更加敏锐，但也更加破碎。这种状态有时是防御性的——当理智无法承载现实的重压时，精神会通过“疯狂”来寻找出口。</p>
+                <p>本栏目旨在剥离标签，通过历史文献、心理学案例与现代视角，还原“狂人”作为独立个体的真实面貌，探讨疯狂与天才、疯狂与真理之间的微妙联系。</p>
+            </div>
+            <aside class="sidebar">
+                <h3>核心特征观察</h3>
+                <ul class="checklist">
+                    <li><strong>感知异常：</strong> 对环境刺激过度敏感，出现幻觉或妄想。</li>
+                    <li><strong>逻辑断裂：</strong> 思维跳跃，难以遵循常规因果链条。</li>
+                    <li><strong>情感爆发：</strong> 情绪极度不稳定，或表现为极度冷漠。</li>
+                    <li><strong>自我认知错位：</strong> 混淆现实与虚构，坚信荒谬的信念。</li>
+                    <li><strong>反社会倾向：</strong> 视规则为束缚，甚至试图打破现有秩序。</li>
+                </ul>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Symptom Guide -->
+    <section class="container" id="symptoms">
+        <h2 class="section-title">症状指南：自我观察与评估</h2>
+        <div class="grid">
+            <article class="card">
+                <div class="card-body">
+                    <span class="card-tag">妄想类型</span>
+                    <h3 class="card-title">被害妄想</h3>
+                    <p class="card-desc">坚信自己被跟踪、监视或阴谋陷害。这是最常见的精神症状之一，通常伴随着极度的警觉与恐惧。</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-body">
+                    <span class="card-tag">认知障碍</span>
+                    <h3 class="card-title">思维奔逸</h3>
+                    <p class="card-desc">思维速度极快，联想过程跳跃。患者往往语速极快，难以被打断，说话内容常漫无边际。</p>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-body">
+                    <span class="card-tag">行为模式</span>
+                    <h3 class="card-title">怪异行为</h3>
+                    <p class="card-desc">做出不符合社会规范的动作，如模仿动物、赤身裸体或无意义的重复性动作，以表达内心的混乱。</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="container faq-section" id="faq">
+        <h2 class="section-title">常见问题解答</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">狂人和疯子有什么区别？</div>
+            <div class="faq-answer">
+                <p>在临床医学中，这两个词常互换使用，指代精神障碍。但在文学与社会学语境中，“狂人”可能包含一种主动的、具有创造性的精神状态，甚至带有某种反抗精神；而“疯子”更多指代丧失理智、完全失控的状态。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">如何判断身边的人是否处于狂躁状态？</div>
+            <div class="faq-answer">
+                <p>主要观察情绪是否极度高涨或易怒、睡眠需求是否减少、言语是否变得滔滔不绝且难以打断、注意力是否难以集中以及是否有冲动行为。如果这些症状持续超过一周且影响正常生活，建议寻求专业医生的帮助。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">历史上的天才往往带有狂人特征吗？</div>
+            <div class="faq-answer">
+                <p>许多历史上伟大的艺术家、科学家和思想家都表现出与常人不同的思维模式和性格特征。心理学研究表明，高创造力往往与一定的认知灵活性相关，但这并不等同于病理性的精神疾病。关键在于这种状态是否影响了社会功能。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <a href="#" class="logo">狂人<span>.</span></a>
+                <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                    专注于精神现象的深度观察与解析。我们记录历史，审视当下，探索人类心灵的边界。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>栏目导航</h4>
+                <ul>
+                    <li><a href="#">历史档案</a></li>
+                    <li><a href="#">心理图谱</a></li>
+                    <li><a href="#">症状指南</a></li>
+                    <li><a href="#">学术文献</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">编辑团队</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 狂人档案. All Rights Reserved. 本站内容仅供学术研究与教育参考，不构成医疗诊断建议。
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple FAQ Accordion Logic
+    document.addEventListener('DOMContentLoaded', () => {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+                      </html>
