@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="浅绿吧 - 提供高品质绿色环保生活资讯、环保理念分享、绿色出行指南及可持续生活方式推荐。">
+    <meta name="keywords" content="浅绿吧,环保,绿色生活,低碳,可持续发展">
+    <title>浅绿吧-绿色环保生活与可持续理念分享平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --dark-green: #27ae60;
+            --light-green: #e8f8f5;
+            --text-main: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --bg-body: #f9fbf9;
+            --bg-card: #ffffff;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--dark-green);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--primary-green);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-green);
+        }
+
+        .header-actions .btn-subscribe {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .header-actions .btn-subscribe:hover {
+            background-color: var(--dark-green);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--light-green) 0%, #d5f5e3 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .stat-item h3 {
+            font-size: 28px;
+            color: var(--dark-green);
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+            padding-left: 15px;
+            border-left: 5px solid var(--primary-green);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(46, 204, 113, 0.15);
+        }
+
+        .cat-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--light-green);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cat-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--dark-green);
+        }
+
+        .cat-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .cat-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Featured Articles */
+        .featured {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .article-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--bg-card);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .article-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .article-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-tag {
+            font-size: 12px;
+            color: var(--primary-green);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            padding: 60px 0;
+            background-color: var(--light-green);
+        }
+
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .tips-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .tips-list {
+            margin-top: 30px;
+        }
+
+        .tips-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .check-icon {
+            color: var(--dark-green);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .tips-image {
+            flex: 1;
+            min-width: 300px;
+            background: #fff;
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .tips-image img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            margin-bottom: 15px;
+            border-radius: var(--radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question:hover {
+            background-color: #fcfcfc;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-secondary);
+            font-size: 15px;
+            display: none;
+            border-top: 1px solid #f5f5f5;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+            padding-top: 15px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--primary-green);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                浅绿吧
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">低碳生活</a></li>
+                    <li><a href="#">环保资讯</a></li>
+                    <li><a href="#">绿色出行</a></li>
+                    <li><a href="#">环保商城</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" class="btn-subscribe">加入我们</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>让绿色成为生活的一种习惯</h1>
+                <p>浅绿吧致力于传播可持续发展理念，为您提供实用的低碳生活指南、环保资讯及绿色出行建议，共同守护我们的地球家园。</p>
+                <a href="#" style="display:inline-block; padding: 12px 30px; background:var(--dark-green); color:white; border-radius:30px; font-weight:600; margin-bottom:20px;">开始探索</a>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10W+</h3>
+                        <p>环保爱好者</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5000+</h3>
+                        <p>环保指南文章</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>绿色合作项目</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories container">
+            <h2 class="section-title">热门环保领域</h2>
+            <div class="category-grid">
+                <div class="cat-card">
+                    <div class="cat-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17.66 8L12 2.35 6.34 8C4.78 9.56 4 11.64 4 13.64s.78 4.11 2.34 5.67 3.61 2.35 5.66 2.35 4.1-.79 5.66-2.35S20 15.64 20 13.64 19.22 9.56 17.66 8zM6 14c.01-2 .62-3.27 1.76-4.4L12 5.27l4.24 4.38C17.38 10.77 17.99 12 18 14H6z"/></svg>
+                    </div>
+                    <h3>低碳饮食</h3>
+                    <p>减少碳足迹的健康食谱与饮食建议</p>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h3>绿色出行</h3>
+                    <p>骑行、公交与拼车的环保出行方案</p>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    </div>
+                    <h3>垃圾分类</h3>
+                    <p>城市生活垃圾分类投放与回收指南</p>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">
+                        <svg viewBox="0 0 24 24"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
+                    </div>
+                    <h3>节能减排</h3>
+                    <p>家庭与办公场所的节能技巧与设备</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Articles -->
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">最新环保资讯</h2>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/forest/400/250" alt="森林保护" class="article-img">
+                        <div class="article-content">
+                            <span class="article-tag">自然保护</span>
+                            <h3 class="article-title"><a href="#">如何通过日常习惯保护森林资源</a></h3>
+                            <p class="article-excerpt">森林是地球之肺，了解减少纸张使用、选择可持续木材产品的重要性。</p>
+                            <div class="article-meta">
+                                <span>2023-10-24</span>
+                                <span>阅读 2.3k</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/bike/400/250" alt="骑行生活" class="article-img">
+                        <div class="article-content">
+                            <span class="article-tag">出行方式</span>
+                            <h3 class="article-title"><a href="#">城市骑行：一种健康的低碳通勤方式</a></h3>
+                            <p class="article-excerpt">探讨骑行对个人健康和城市空气质量的双重益处，以及安全骑行指南。</p>
+                            <div class="article-meta">
+                                <span>2023-10-22</span>
+                                <span>阅读 1.8k</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/water/400/250" alt="水资源" class="article-img">
+                        <div class="article-content">
+                            <span class="article-tag">水资源</span>
+                            <h3 class="article-title"><a href="#">家庭节水小妙招：让每一滴水都物尽其用</a></h3>
+                            <p class="article-excerpt">分享厨房、浴室及花园中的节水技巧，降低家庭水费开支。</p>
+                            <div class="article-meta">
+                                <span>2023-10-20</span>
+                                <span>阅读 3.1k</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tips-section">
+            <div class="container tips-container">
+                <div class="tips-content">
+                    <h2 class="section-title">为什么要选择低碳生活？</h2>
+                    <p style="color: #555; margin-bottom: 20px;">低碳生活不仅是一种环保责任，更是提升生活品质的有效途径。通过减少能源消耗和废物产生，我们可以有效缓解全球变暖趋势，同时节省开支，改善身心健康。</p>
+                    <ul class="tips-list">
+                        <li>
+                            <div class="check-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div>
+                                <strong>减少碳排放</strong>
+                                <p style="font-size:14px; color:#666;">有效减缓温室效应，保护大气环境。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div>
+                                <strong>降低生活成本</strong>
+                                <p style="font-size:14px; color:#666;">节约水电燃气，减少不必要的消费。</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="check-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            </div>
+                            <div>
+                                <strong>促进身心健康</strong>
+                                <p style="font-size:14px; color:#666;">亲近自然，减少电子设备使用时间。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tips-image">
+                    <img src="https://picsum.photos/seed/greenhouse/600/400" alt="绿色生活示意图">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq container">
+            <h2 class="section-title">常见问题解答</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>什么是“浅绿”生活方式？</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    “浅绿”并非要求每个人都成为素食主义者或完全不使用化石燃料，而是指在日常生活中，通过循序渐进的方式，减少不必要的浪费，选择对环境负担较小的产品和服务，逐步养成环保意识。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>垃圾分类难吗？有什么简单的方法？</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    垃圾分类的核心在于“干湿分离”。您可以将厨余垃圾与其他垃圾分开，可回收物（纸板、塑料瓶、金属）单独存放。许多城市现在都有APP或小程序提供简单的分类查询服务，刚开始可以多参考当地的分类指南。
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>个人能做的环保贡献有多大？</span>
+                    <span class="faq-icon">▼</span>
+                </div>
+                <div class="faq-answer">
+                    每一个人的行动汇聚起来就是巨大的力量。例如，减少使用一次性塑料制品每年可以减少数亿吨的垃圾；选择公共交通可以显著降低城市的尾气排放。积少成多，您的选择确实在改变世界。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于浅绿吧</h4>
+                    <p style="color:#bdc3c7; font-size:14px; line-height:1.8;">
+                        浅绿吧是一个专注于环保生活与可持续发展的在线社区。我们希望通过分享知识和经验，帮助更多人了解环保的重要性，并参与到绿色行动中来。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">低碳生活指南</a></li>
+                        <li><a href="#">环保资讯</a></li>
+                        <li><a href="#">参与计划</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">合作咨询</a></li>
+                        <li><a href="#">投稿建议</a></li>
+                        <li><a href="#">志愿者招募</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <div style="display:flex; gap:10px;">
+                        <div style="width:32px; height:32px; background:rgba(255,255,255,0.1); border-radius:4px;"></div>
+                        <div style="width:32px; height:32px; background:rgba(255,255,255,0.1); border-radius:4px;"></div>
+                        <div style="width:32px; height:32px; background:rgba(255,255,255,0.1); border-radius:4px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 浅绿吧 版权所有 | 专注于绿色环保生活</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+              </html>
