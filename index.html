@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="站住小哑妻-提供热门短剧、言情小说及影视解说内容，涵盖豪门总裁、追妻火葬场等经典题材，在线阅读与精彩剧情回顾。">
+    <meta name="keywords" content="站住小哑妻,短剧,言情小说,追妻火葬场,豪门总裁,在线阅读">
+    <title>站住小哑妻-热门短剧与言情阅读平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d63384;
+            --primary-hover: #b02a6b;
+            --secondary-color: #6f42c1;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #212529;
+            --text-secondary: #6c757d;
+            --border-color: #dee2e6;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-unit * 2);
+            padding-bottom: var(--spacing-unit);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 1.2em;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .view-more {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .view-more:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-main);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--bg-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+
+        .search-input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 0.9rem;
+            width: 150px;
+            color: var(--text-main);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, #f8d7da 0%, #f5c2c7 100%);
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            color: #721c24;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: #491217;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #721c24;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(214, 51, 132, 0.3);
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid var(--border-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-cover {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+        }
+
+        .card-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-cover img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-title:hover {
+            color: var(--primary-color);
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-count {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-sm {
+            padding: 0.3rem 0.8rem;
+            font-size: 0.85rem;
+            border-radius: 4px;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .feature-item p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Ranking List */
+        .ranking-section {
+            margin-bottom: 3rem;
+        }
+
+        .ranking-list {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .ranking-item {
+            display: flex;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .ranking-item:last-child {
+            border-bottom: none;
+        }
+
+        .ranking-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .rank-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            width: 40px;
+            text-align: center;
+            margin-right: 1rem;
+            font-style: italic;
+        }
+
+        .rank-num.top-3 {
+            color: var(--primary-color);
+        }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .rank-title:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+        .rank-stats {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .rank-score {
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-left: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background-color: #f8f9fa;
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            padding: 1.25rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #adb5bd;
+            padding: 3rem 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1.2rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #495057;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 1rem 0;
+                gap: 1rem;
+            }
+
+            .nav-menu {
+                display: none; /* Simplified for mobile demo */
+            }
+            
+            .nav-menu.mobile-active {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: white;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                padding: 1rem;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-tags {
+                justify-content: center;
+            }
+
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ranking-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .rank-score {
+                margin-left: 0;
+                margin-top: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>站住小哑妻</span>
+            </a>
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" class="nav-link active">首页</a></li>
+                    <li><a href="#" class="nav-link">短剧推荐</a></li>
+                    <li><a href="#" class="nav-link">言情小说</a></li>
+                    <li><a href="#" class="nav-link">热门榜单</a></li>
+                    <li><a href="#" class="nav-link">社区讨论</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索剧情或作品...">
+                <button class="search-btn">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="hero-tags">
+                        <span class="tag">#豪门总裁</span>
+                        <span class="tag">#追妻火葬场</span>
+                        <span class="tag">#甜宠爽文</span>
+                    </div>
+                    <h1>站住小哑妻：深情霸总的极致宠溺</h1>
+                    <p>她因意外失声，却意外惹上了京圈最尊贵的男人。从最初的契约婚姻到后来的生死相随，看哑女如何用爱治愈冷心霸总。</p>
+                    <a href="#" class="btn btn-primary">立即阅读</a>
+                    <a href="#" class="btn btn-outline" style="margin-left: 10px;">观看短剧</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/romancehero/600/400" alt="站住小哑妻封面">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="feature-icon">📖</span>
+                        <h3>海量正版小说</h3>
+                        <p>收录全网热门言情、总裁、豪门题材，更新速度快，排版舒适。</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎬</span>
+                        <h3>短剧一键观看</h3>
+                        <p>将经典小说改编为高清短剧，随时随地，碎片化时间享受精彩剧情。</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💬</span>
+                        <h3>实时互动社区</h3>
+                        <p>书迷聚集地，发表读后感，参与剧情讨论，与作者零距离交流。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Updates -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">最新更新</h2>
+                <a href="#" class="view-more">查看更多 &rarr;</a>
+            </div>
+            <div class="content-grid">
+                <!-- Card 1 -->
+                <article class="card">
+                    <div class="card-cover">
+                        <span class="card-badge">连载中</span>
+                        <img src="https://picsum.photos/seed/novel1/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="#">豪门隐婚：总裁的哑妻要翻身</a></h3>
+                        <div class="card-meta">作者：墨染流年 | 分类：现代言情</div>
+                        <p class="card-desc">三年前她被赶出顾家，三年后带着萌宝归来。他步步紧逼，她步步后退，直到真相揭开，他跪在雨中求她回头...</p>
+                        <div class="card-footer">
+                            <span class="chapter-count">第 128 章</span>
+                            <a href="#" class="btn btn-sm btn-outline">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <div class="card-cover">
+                        <span class="card-badge">完结</span>
+                        <img src="https://picsum.photos/seed/novel2/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="#">冷面帝少的宠妻日常</a></h3>
+                        <div class="card-meta">作者：云浅浅 | 分类：豪门世家</div>
+                        <p class="card-desc">她以为他只是贪恋她的身体，却不知他早已把她刻进了骨子里。哑女也能逆袭，这一世，她绝不再做他的附属品。</p>
+                        <div class="card-footer">
+                            <span class="chapter-count">全本 1024 章</span>
+                            <a href="#" class="btn btn-sm btn-outline">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <div class="card-cover">
+                        <span class="card-badge">热门</span>
+                        <img src="https://picsum.photos/seed/novel3/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="#">错惹影帝：哑妻不好惹</a></h3>
+                        <div class="card-meta">作者：夜微凉 | 分类：都市情缘</div>
+                        <p class="card-desc">一场意外让她失去声音，却意外被当红影帝捡回家。娱乐圈的流言蜚语，挡不住他对她的独宠。</p>
+                        <div class="card-footer">
+                            <span class="chapter-count">第 56 章</span>
+                            <a href="#" class="btn btn-sm btn-outline">阅读</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="card">
+                    <div class="card-cover">
+                        <span class="card-badge">连载</span>
+                        <img src="https://picsum.photos/seed/novel4/300/400" alt="小说封面">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="#">前妻归来：夜少宠妻无度</a></h3>
+                        <div class="card-meta">作者：苏小小 | 分类：豪门恩怨</div>
+                        <p class="card-desc">五年前他亲手将她送进监狱，五年后她摇身一变成为国际顶级设计师。再次相遇，他是高高在上的夜总，她是他的债主。</p>
+                        <div class="card-footer">
+                            <span class="chapter-count">第 89 章</span>
+                            <a href="#" class="btn btn-sm btn-outline">阅读</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Ranking Section -->
+        <section class="container ranking-section">
+            <div class="section-header">
+                <h2 class="section-title">月度热榜</h2>
+                <a href="#" class="view-more">查看榜单 &rarr;</a>
+            </div>
+            <div class="ranking-list">
+                <div class="ranking-item">
+                    <span class="rank-num top-3">1</span>
+                    <div class="rank-info">
+                        <div class="rank-title"><a href="#">哑妻难哄：顾少的掌心宠</a></div>
+                        <div class="rank-stats">阅读量：1.2亿 | 收藏：500万</div>
+                    </div>
+                    <div class="rank-score">9.8</div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num top-3">2</span>
+                    <div class="rank-info">
+                        <div class="rank-title"><a href="#">冷少，夫人她又带球跑了</a></div>
+                        <div class="rank-stats">阅读量：9800万 | 收藏：450万</div>
+                    </div>
+                    <div class="rank-score">9.6</div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num top-3">3</span>
+                    <div class="rank-info">
+                        <div class="rank-title"><a href="#">替身前妻：影帝他后悔了</a></div>
+                        <div class="rank-stats">阅读量：8500万 | 收藏：380万</div>
+                    </div>
+                    <div class="rank-score">9.5</div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num">4</span>
+                    <div class="rank-info">
+                        <div class="rank-title"><a href="#">豪门弃女：夫人她是首富</a></div>
+                        <div class="rank-stats">阅读量：7200万 | 收藏：300万</div>
+                    </div>
+                    <div class="rank-score">9.4</div>
+                </div>
+                <div class="ranking-item">
+                    <span class="rank-num">5</span>
+                    <div class="rank-info">
+                        <div class="rank-title"><a href="#">帝少心头宠：全能千金</a></div>
+                        <div class="rank-stats">阅读量：6800万 | 收藏：280万</div>
+                    </div>
+                    <div class="rank-score">9.3</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">常见问题</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">如何搜索我喜欢的作品？</div>
+                        <div class="faq-answer">您可以使用页面顶部的搜索框，输入小说名称、作者名或关键词，系统将快速为您筛选出相关内容。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">阅读需要付费吗？</div>
+                        <div class="faq-answer">本站大部分优质小说提供免费阅读，部分VIP章节可能需要付费解锁，我们支持多种支付方式。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">支持手机端阅读吗？</div>
+                        <div class="faq-answer">完全支持。我们的网站采用响应式设计，在手机、平板和电脑上都能获得流畅的阅读体验。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">发现不良内容如何举报？</div>
+                        <div class="faq-answer">如果您发现任何违规内容，请通过页面底部的联系方式与我们联系，我们会尽快处理。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">平台介绍</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">广告合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">现代言情</a></li>
+                        <li><a href="#">古代言情</a></li>
+                        <li><a href="#">豪门总裁</a></li>
+                        <li><a href="#">短剧推荐</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 站住小哑妻阅读网 版权所有 | 仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Search Box Interaction (Visual only)
+        const searchInput = document.querySelector('.search-input');
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                alert('正在搜索：' + searchInput.value);
+            }
+        });
+    </script>
+</body>
+  </html>
