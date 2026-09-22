@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="蜜芽忘忧草官方首页 - 提供高品质、安全可靠的成人健康生活用品与服务。专注成人用品选购指南、品牌推荐及私密健康资讯，致力于为用户提供专业、便捷的购物体验。">
+    <meta name="keywords" content="蜜芽 忘忧草, 成人用品, 隐私健康, 情趣用品, 蜜芽商城, 忘忧草正品">
+    <title>蜜芽 忘忧草-成人健康生活用品精选与私密购物指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --primary-hover: #b71c1c;
+            --secondary-color: #fce4ec;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: var(--spacing-unit);
+            padding-left: var(--spacing-unit);
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: normal;
+            padding-left: 10px;
+        }
+
+        .section-title a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar {
+            background: #f1f1f1;
+            font-size: 12px;
+            color: var(--text-secondary);
+            padding: 6px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .top-bar a:hover {
+            color: var(--primary-color);
+        }
+
+        .main-header {
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 30px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--primary-color);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            font-weight: 600;
+            font-size: 15px;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-menu a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f0 0%, #ffffff 100%);
+            padding: 40px 0;
+            margin-bottom: 30px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .hero-text p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 250px;
+            background-color: #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Categories */
+        .categories {
+            padding: 20px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+
+        .cat-icon {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 10px;
+            background: var(--secondary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .category-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .category-card p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        /* Featured Products */
+        .products-section {
+            padding: 40px 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img-wrapper {
+            height: 200px;
+            background: #f5f5f5;
+            position: relative;
+        }
+
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--primary-color);
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .product-info {
+            padding: 15px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .product-price small {
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .product-footer {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-sales {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .btn-sm {
+            padding: 6px 15px;
+            font-size: 12px;
+        }
+
+        /* Privacy Banner */
+        .privacy-banner {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 40px 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .privacy-icon {
+            font-size: 24px;
+        }
+
+        .privacy-content h4 {
+            margin-bottom: 5px;
+            color: #856404;
+        }
+
+        .privacy-content p {
+            font-size: 14px;
+            color: #856404;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c2c2c;
+            color: #ccc;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin: 0;
+            }
+
+            .nav-menu {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 200px;
+            }
+            
+            .section-title {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <a href="#">隐私声明</a>
+            <a href="#">配送说明</a>
+            <a href="#">退换货政策</a>
+            <a href="#">联系客服</a>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo">蜜芽<span>忘忧草</span></a>
+                
+                <div class="search-bar">
+                    <input type="text" placeholder="搜索成人用品、品牌或健康产品...">
+                    <button type="button">🔍</button>
+                </div>
+
+                <nav class="nav-menu">
+                    <a href="#" class="active">首页</a>
+                    <a href="#">热门推荐</a>
+                    <a href="#">新品上市</a>
+                    <a href="#">品牌专区</a>
+                    <a href="#">健康资讯</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>找回生活的平衡，探索自我愉悦的无限可能</h1>
+                    <p>我们致力于提供安全、专业、高品质的成人健康产品。从知名品牌到创新设计，满足您多样化的需求。</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary">立即选购</a>
+                        <a href="#" class="btn btn-outline">查看指南</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-badge">全网热销</div>
+                    <img src="https://picsum.photos/seed/health1/600/400" alt="健康生活展示">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-title">
+                <span>热门分类</span>
+                <a href="#">查看更多 ></a>
+            </div>
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <div class="cat-icon">🛍️</div>
+                    <h3>女性用品</h3>
+                    <p>私处护理 & 情趣</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="cat-icon">🧔</div>
+                    <h3>男性用品</h3>
+                    <p>延时 & 增大 & 护理</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="cat-icon">🛌</div>
+                    <h3>情趣玩具</h3>
+                    <p>仿真 & 振动 & 按摩</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="cat-icon">🧴</div>
+                    <h3>润滑液</h3>
+                    <p>水基 & 硅基 & 珍珠</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="cat-icon">🩲</div>
+                    <h3>内衣睡衣</h3>
+                    <p>情趣内衣 & 亲肤材质</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="cat-icon">🩺</div>
+                    <h3>健康护理</h3>
+                    <p>计生用品 & 健康监测</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products-section">
+        <div class="container">
+            <div class="section-title">
+                <span>本周精选</span>
+                <a href="#">查看更多 ></a>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="product-tag">热销</span>
+                        <img src="https://picsum.photos/seed/prod1/300/300" alt="私密护理套装">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">女性护理</div>
+                        <h3 class="product-title">草本私密护理套装 呵护娇嫩肌肤</h3>
+                        <div class="product-price">¥89.00 <small>/套</small></div>
+                        <div class="product-footer">
+                            <span class="product-sales">已售 2.3w+</span>
+                            <a href="#" class="btn btn-primary btn-sm">加入购物车</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="product-tag">新品</span>
+                        <img src="https://picsum.photos/seed/prod2/300/300" alt="智能震动棒">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">情趣玩具</div>
+                        <h3 class="product-title">无线蓝牙智能震动棒 10种模式</h3>
+                        <div class="product-price">¥128.00 <small>/个</small></div>
+                        <div class="product-footer">
+                            <span class="product-sales">已售 8k+</span>
+                            <a href="#" class="btn btn-primary btn-sm">加入购物车</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="https://picsum.photos/seed/prod3/300/300" alt="延时喷剂">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">男性护理</div>
+                        <h3 class="product-title">植物延时喷剂 持久力加倍</h3>
+                        <div class="product-price">¥59.00 <small>/瓶</small></div>
+                        <div class="product-footer">
+                            <span class="product-sales">已售 5k+</span>
+                            <a href="#" class="btn btn-primary btn-sm">加入购物车</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="product-tag">特价</span>
+                        <img src="https://picsum.photos/seed/prod4/300/300" alt="情趣内衣">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">内衣睡衣</div>
+                        <h3 class="product-title">丝绒情趣内衣 包裹式设计</h3>
+                        <div class="product-price">¥199.00 <small>/套</small></div>
+                        <div class="product-footer">
+                            <span class="product-sales">已售 1k+</span>
+                            <a href="#" class="btn btn-primary btn-sm">加入购物车</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy & Info Banner -->
+    <div class="container">
+        <div class="privacy-banner">
+            <div class="privacy-icon">🔒</div>
+            <div class="privacy-content">
+                <h4>绝对隐私，安心购物</h4>
+                <p>我们承诺对所有订单信息、收货人信息及支付信息进行严格加密保护。快递包裹外盒无任何店铺标识，让您享受完全私密的购物体验。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="products-section" style="background: #fff;">
+        <div class="container">
+            <div class="section-title">
+                <span>常见问题解答</span>
+                <a href="#">更多帮助 ></a>
+            </div>
+            <div style="display: grid; gap: 15px;">
+                <details style="background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 600; color: #333;">发货时间是什么时候？</summary>
+                    <p style="margin-top: 10px; color: #666;">一般订单确认后24小时内发货，节假日顺延。全国大部分地区支持次日达或隔日达。</p>
+                </details>
+                <details style="background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 600; color: #333;">如何保证快递的隐私？</summary>
+                    <p style="margin-top: 10px; color: #666;">所有包裹均使用普通快递，外包装上不显示任何店铺名称、商品内容或LOGO。</p>
+                </details>
+                <details style="background: #fff; border: 1px solid #eee; padding: 15px; border-radius: 8px; cursor: pointer;">
+                    <summary style="font-weight: 600; color: #333;">支持哪些支付方式？</summary>
+                    <p style="margin-top: 10px; color: #666;">支持支付宝、微信支付、银行卡支付等多种主流方式，支付过程安全加密。</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">品牌故事</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">媒体报道</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>购物指南</h4>
+                    <ul>
+                        <li><a href="#">新用户注册</a></li>
+                        <li><a href="#">会员积分</a></li>
+                        <li><a href="#">配送范围</a></li>
+                        <li><a href="#">退换货流程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>客户服务</h4>
+                    <ul>
+                        <li><a href="#">在线客服</a></li>
+                        <li><a href="#">联系客服</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <p style="font-size: 14px; margin-bottom: 10px;">获取最新优惠与产品资讯</p>
+                    <div style="display: flex; gap: 10px;">
+                        <span style="background: #444; padding: 5px 10px; border-radius: 4px; font-size: 12px;">微信</span>
+                        <span style="background: #444; padding: 5px 10px; border-radius: 4px; font-size: 12px;">微博</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 蜜芽 忘忧草 版权所有. 本网站仅提供产品展示与信息服务，未成年人请勿浏览。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
