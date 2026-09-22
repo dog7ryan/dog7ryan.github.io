@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="莎士比亚简介 - 英国文艺复兴时期伟大的剧作家、诗人，人文主义文学的集大成者。本站提供威廉·莎士比亚生平、主要作品介绍、戏剧分类及文学成就深度解析。">
+    <meta name="keywords" content="莎士比亚简介,威廉莎士比亚,莎士比亚作品,英国文学,文艺复兴,哈姆雷特,罗密欧与朱丽叶,莎士比亚生平">
+    <title>莎士比亚简介-英国文艺复兴时期伟大的剧作家与诗人</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8a2be2;
+            --secondary-color: #2c0e37;
+            --accent-color: #ffd700;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* 首屏 Hero */
+        .hero {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, #4a148c 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-subtitle {
+            margin-top: 15px;
+            font-size: 1rem;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        /* 通用区块样式 */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* 生平简介卡片 */
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .bio-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .bio-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 4px solid #eee;
+        }
+
+        .bio-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .bio-card .dates {
+            display: inline-block;
+            background: #eee;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .bio-content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* 代表作品网格 */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .work-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .work-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .work-info {
+            padding: 20px;
+        }
+
+        .work-tag {
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .work-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .work-info p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 戏剧分类 */
+        .categories-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .category-block h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .category-list li {
+            background: var(--bg-card);
+            margin-bottom: 10px;
+            padding: 15px 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .category-list li span.work-name {
+            font-weight: 500;
+        }
+
+        .category-list li span.work-type {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            background: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* 文学成就 */
+        .achievements {
+            background-color: white;
+        }
+
+        .achievements-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .achievement-item {
+            flex: 1 1 300px;
+            background: var(--bg-body);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .achievement-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .achievement-item p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: #ccc;
+        }
+
+        .footer-col a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin-top: 15px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .bio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">莎翁<span>百科</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#bio">生平简介</a></li>
+                    <li><a href="#works">经典作品</a></li>
+                    <li><a href="#tragedies">悲剧</a></li>
+                    <li><a href="#comedies">喜剧</a></li>
+                    <li><a href="#histories">历史剧</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>威廉·莎士比亚</h1>
+                <p>英国文艺复兴时期伟大的剧作家、诗人，西方文学史上最杰出的代表人物之一。</p>
+                <div class="hero-subtitle">"全世界的光明和日月，都只能作为他的光辉而闪耀。"</div>
+            </div>
+        </section>
+
+        <!-- 生平简介 -->
+        <section id="bio" class="container">
+            <div class="section-title">
+                <h2>生平简介</h2>
+                <p>探索这位文学巨匠的早年经历与人生轨迹</p>
+            </div>
+            <div class="bio-grid">
+                <article class="bio-card">
+                    <img src="https://picsum.photos/seed/shakespeare_portrait/200/200" alt="莎士比亚画像">
+                    <h3>威廉·莎士比亚</h3>
+                    <span class="dates">1564年 - 1616年</span>
+                    <p>出生于英格兰斯特拉福，是英国文学史上最杰出的剧作家，被誉为“埃文河畔的吟游诗人”。</p>
+                </article>
+                <div class="bio-content">
+                    <p><strong>早年生活：</strong> 莎士比亚出生于一个富裕的市民家庭，父亲曾担任过镇长。他在当地的文法学校接受教育，学习拉丁文和古典文学，这为他日后的创作奠定了深厚的语言基础。</p>
+                    <p><strong>伦敦时期：</strong> 大约在1585年左右，莎士比亚移居伦敦。起初他在剧院做杂役，后逐渐成为演员和剧作家。他在伦敦度过了职业生涯的巅峰时期，创作了大量的戏剧和诗歌。</p>
+                    <p><strong>晚年与归乡：</strong> 1613年左右，莎士比亚逐渐淡出伦敦的戏剧舞台，回到斯特拉福，直到1616年4月23日去世，享年52岁。他的逝世日期恰好是圣乔治节，也是他的生日，这在当时被普遍认为是一种幸运的巧合。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 代表作品 -->
+        <section id="works" class="achievements">
+            <div class="container">
+                <div class="section-title">
+                    <h2>主要作品</h2>
+                    <p>他的作品跨越喜剧、悲剧、历史剧和浪漫传奇剧，影响深远</p>
+                </div>
+                <div class="works-grid">
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/hamlet/400/300" alt="哈姆雷特剧照" class="work-img">
+                        <div class="work-info">
+                            <span class="work-tag">悲剧</span>
+                            <h3>哈姆雷特</h3>
+                            <p>“生存还是毁灭”是该剧最著名的独白。讲述了丹麦王子为父报仇的故事，深刻探讨了人性、复仇与道德的复杂性。</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/romeo/400/300" alt="罗密欧与朱丽叶" class="work-img">
+                        <div class="work-info">
+                            <span class="work-tag">悲剧</span>
+                            <h3>罗密欧与朱丽叶</h3>
+                            <p>讲述了蒙太古家族与凯普莱特家族两代人的恩怨，以及年轻恋人为了爱情不惜牺牲生命的凄美故事。</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/macbeth/400/300" alt="麦克白" class="work-img">
+                        <div class="work-info">
+                            <span class="work-tag">悲剧</span>
+                            <h3>麦克白</h3>
+                            <p>一部关于野心与腐败的戏剧。讲述了苏格兰将军麦克白在女巫预言的诱惑下，弑君篡位并最终走向毁灭的过程。</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/midsummer/400/300" alt="仲夏夜之梦" class="work-img">
+                        <div class="work-info">
+                            <span class="work-tag">喜剧</span>
+                            <h3>仲夏夜之梦</h3>
+                            <p>充满了魔法与误会。讲述了四对年轻恋人在森林中发生的荒诞而浪漫的故事，展现了爱情的盲目与纯真。</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/kinglear/400/300" alt="李尔王" class="work-img">
+                        <div class="work-info">
+                            <span class="work-tag">悲剧</span>
+                            <h3>李尔王</h3>
+                            <p>探讨了权力的荒谬与亲情的背叛。年迈的李尔王因听信谗言而驱逐了正直的长女，最终在苦难中寻求救赎。</p>
+                        </div>
+                    </article>
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/winter/400/300" alt="冬天的故事" class="work-img">
+                        <div class="work-info">
+                            <span class="work-tag">传奇剧</span>
+                            <h3>冬天的故事</h3>
+                            <p>一部充满希望的传奇剧，讲述了因嫉妒和猜忌导致的悲剧，最终在时间的流逝中迎来和解与新生。</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 戏剧分类 -->
+        <section id="categories" class="container">
+            <div class="section-title">
+                <h2>戏剧分类</h2>
+                <p>莎士比亚的戏剧作品主要分为四大类</p>
+            </div>
+            <div class="categories-wrapper">
+                <div class="category-block">
+                    <h3>悲剧</h3>
+                    <ul class="category-list">
+                        <li><span class="work-name">哈姆雷特</span> <span class="work-type">复仇</span></li>
+                        <li><span class="work-name">奥赛罗</span> <span class="work-type">嫉妒</span></li>
+                        <li><span class="work-name">李尔王</span> <span class="work-type">权力</span></li>
+                        <li><span class="work-name">麦克白</span> <span class="work-type">野心</span></li>
+                        <li><span class="work-name">安东尼与克莉奥佩特拉</span> <span class="work-type">爱情</span></li>
+                    </ul>
+                </div>
+                <div class="category-block">
+                    <h3>喜剧</h3>
+                    <ul class="category-list">
+                        <li><span class="work-name">仲夏夜之梦</span> <span class="work-type">魔法</span></li>
+                        <li><span class="work-name">威尼斯商人</span> <span class="work-type">法庭</span></li>
+                        <li><span class="work-name">皆大欢喜</span> <span class="work-type">田园</span></li>
+                        <li><span class="work-name">第十二夜</span> <span class="work-type">误会</span></li>
+                        <li><span class="work-name">无事生非</span> <span class="work-type">爱情</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文学成就 -->
+        <section id="achievements" class="achievements">
+            <div class="container">
+                <div class="section-title">
+                    <h2>文学成就与影响</h2>
+                    <p>对英语语言及世界文学发展的深远贡献</p>
+                </div>
+                <div class="achievements-content">
+                    <div class="achievement-item">
+                        <h4>语言大师</h4>
+                        <p>莎士比亚创造了约1700-2000个英语单词和短语，极大地丰富了英语词汇量。他的作品是学习英语文学和语言的经典教材。</p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4>人性洞察</h4>
+                        <p>他笔下的人物性格复杂多面，不再是非黑即白的符号，而是充满了矛盾与挣扎。这种对人类心理深刻的洞察力至今仍被研究者推崇。</p>
+                    </div>
+                    <div class="achievement-item">
+                        <h4>文化符号</h4>
+                        <p>他的戏剧作品被翻译成几乎所有主要语言，在全球各地被无数次搬上舞台。他已成为西方文化和世界文化的标志性人物之一。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于莎士比亚</h4>
+                    <ul>
+                        <li><a href="#">生平年表</a></li>
+                        <li><a href="#">逝世之谜</a></li>
+                        <li><a href="#">环球剧院</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>作品阅读</h4>
+                    <ul>
+                        <li><a href="#">在线阅读</a></li>
+                        <li><a href="#">中英对照</a></li>
+                        <li><a href="#">名句赏析</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">影视改编</a></li>
+                        <li><a href="#">学术研究</a></li>
+                        <li><a href="#">莎士比亚学会</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 莎翁百科 - 专注莎士比亚文化与文学研究。本站内容仅供学习与参考。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
