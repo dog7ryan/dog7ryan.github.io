@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="铁人电影专题页 - 深度解析钢铁侠、铁血战士及各类铁人题材影视作品，提供高清剧照、角色分析、影评推荐及观影指南。">
+    <meta name="keywords" content="电影铁人,钢铁侠,漫威电影,铁血战士,科幻电影,影视鉴赏">
+    <title>电影铁人-钢铁侠与铁血战士深度鉴赏及影视指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #e63946;
+            --secondary-color: #457b9d;
+            --bg-color: #f4f4f4;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/ironman/1920/1080.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--accent-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c92a37;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid #fff;
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-card h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Featured Movies Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: box-shadow 0.3s;
+        }
+
+        .movie-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .poster-wrapper {
+            position: relative;
+            padding-top: 150%; /* 2:3 Aspect Ratio */
+        }
+
+        .poster-wrapper img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .rating-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .movie-info {
+            padding: 1.5rem;
+        }
+
+        .movie-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .movie-meta {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .movie-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .movie-tags span {
+            display: inline-block;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-right: 0.5rem;
+        }
+
+        /* Deep Dive / Analysis Section */
+        .analysis-section {
+            background-color: #fff;
+        }
+
+        .analysis-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .analysis-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .analysis-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .analysis-content p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .feature-list li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #aaa;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .analysis-container {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">铁人<span>视界</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#featured">精选推荐</a></li>
+                    <li><a href="#categories">分类浏览</a></li>
+                    <li><a href="#deep-dive">深度解析</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索电影或角色...">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>钢铁侠与铁血战士</h1>
+                <p>探索改变电影史的铁人题材作品，从漫威宇宙到硬核科幻动作，为您呈现最全面的观影指南与深度影评。</p>
+                <div class="hero-btns">
+                    <a href="#featured" class="btn">开始观影</a>
+                    <a href="#deep-dive" class="btn btn-outline">了解详情</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="section">
+            <div class="container">
+                <h2 class="section-title">铁人题材分类</h2>
+                <div class="categories-grid">
+                    <article class="category-card">
+                        <span class="category-icon">🦾</span>
+                        <h3>漫威超级英雄</h3>
+                        <p>钢铁侠、战争机器等高科技装甲英雄的冒险故事。</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-icon">🦅</span>
+                        <h3>外星猎杀者</h3>
+                        <p>经典的铁血战士系列，探讨生存与人类文明的冲突。</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-icon">🤖</span>
+                        <h3>机甲科幻</h3>
+                        <p>大变形金刚、高达等机器人题材的视觉盛宴。</p>
+                    </article>
+                    <article class="category-card">
+                        <span class="category-icon">⚙️</span>
+                        <h3>工业纪录片</h3>
+                        <p>关于工业制造、挖掘机械与重工业的纪实影像。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Movies Section -->
+        <section id="featured" class="section" style="background-color: #fff;">
+            <div class="container">
+                <h2 class="section-title">热门铁人电影推荐</h2>
+                <div class="movie-grid">
+                    <!-- Movie Card 1 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/ironman/400/600.jpg" alt="钢铁侠海报">
+                            <span class="rating-badge">9.2分</span>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">钢铁侠 (2008)</h3>
+                            <div class="movie-meta">
+                                <span>2008</span>
+                                <span>科幻 / 动作</span>
+                            </div>
+                            <p class="movie-desc">托尼·斯塔克在战俘营中打造了自己的第一套战甲，从此成为守护世界的超级英雄。</p>
+                            <div class="movie-tags">
+                                <span>漫威</span>
+                                <span>复仇者联盟</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 2 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/predator/400/600.jpg" alt="铁血战士海报">
+                            <span class="rating-badge">8.5分</span>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">铁血战士 (1987)</h3>
+                            <div class="movie-meta">
+                                <span>1987</span>
+                                <span>动作 / 惊悚</span>
+                            </div>
+                            <p class="movie-desc">特种部队小队在丛林遭遇外星猎杀者，展开了一场惊心动魄的生死搏斗。</p>
+                            <div class="movie-tags">
+                                <span>外星人</span>
+                                <span>狩猎</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 3 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/transformers/400/600.jpg" alt="变形金刚海报">
+                            <span class="rating-badge">7.8分</span>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">变形金刚</h3>
+                            <div class="movie-meta">
+                                <span>2007</span>
+                                <span>科幻 / 动作</span>
+                            </div>
+                            <p class="movie-desc">来自赛博坦星的汽车人与霸天虎在地球展开激战，为了争夺能源核心。</p>
+                            <div class="movie-tags">
+                                <span>机器人</span>
+                                <span>汽车人</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Movie Card 4 -->
+                    <article class="movie-card">
+                        <div class="poster-wrapper">
+                            <img src="https://picsum.photos/seed/terminator/400/600.jpg" alt="终结者海报">
+                            <span class="rating-badge">8.9分</span>
+                        </div>
+                        <div class="movie-info">
+                            <h3 class="movie-title">终结者2：审判日</h3>
+                            <div class="movie-meta">
+                                <span>1991</span>
+                                <span>动作 / 科幻</span>
+                            </div>
+                            <p class="movie-desc">液态金属机器人T-800护送人类反抗军领袖约翰·康纳躲避天网的追杀。</p>
+                            <div class="movie-tags">
+                                <span>机器人</span>
+                                <span>经典</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Dive Section -->
+        <section id="deep-dive" class="section analysis-section">
+            <div class="container">
+                <div class="analysis-container">
+                    <div class="analysis-image">
+                        <img src="https://picsum.photos/seed/tech/800/600.jpg" alt="科技与电影">
+                    </div>
+                    <div class="analysis-content">
+                        <h2>从银幕到现实：铁人概念的演变</h2>
+                        <p>“铁人”题材在电影史上占据着独特的地位。从早期的特技替身到如今的高科技CGI，这些影片不仅展示了炫酷的装备，更探讨了技术与人性的边界。</p>
+                        <p>无论是钢铁侠托尼·斯塔克对科技的自信，还是铁血战士对生存法则的冷酷坚持，这些角色都成为了流行文化中的经典符号。</p>
+                        
+                        <h3>常见铁人题材特点：</h3>
+                        <ul class="feature-list">
+                            <li>强调个人英雄主义与科技装备的结合。</li>
+                            <li>复杂的机械结构与战术动作设计。</li>
+                            <li>往往涉及外星文明或未来世界的设定。</li>
+                            <li>探讨科技失控与人类自我救赎的主题。</li>
+                        </ul>
+
+                        <div style="margin-top: 2rem;">
+                            <h3>经典系列对比</h3>
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>系列名称</th>
+                                        <th>核心主题</th>
+                                        <th>视觉风格</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>钢铁侠</td>
+                                        <td>科技赋能、商业大亨转型英雄</td>
+                                        <td>流线型、高科技金属质感</td>
+                                    </tr>
+                                    <tr>
+                                        <td>铁血战士</td>
+                                        <td>丛林法则、外星狩猎</td>
+                                        <td>写实、粗犷、自然纹理</td>
+                                    </tr>
+                                    <tr>
+                                        <td>终结者</td>
+                                        <td>未来反乌托邦、时间旅行</td>
+                                        <td>工业废土、冷峻机械</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 1rem;">铁人<span>视界</span></div>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">致力于为影迷提供最全面、最深度的铁人题材电影资源与鉴赏指南。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">最新影评</a></li>
+                        <li><a href="#">高清剧照</a></li>
+                        <li><a href="#">角色图鉴</a></li>
+                        <li><a href="#">影视下载</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">漫威宇宙</a></li>
+                        <li><a href="#">外星生物</a></li>
+                        <li><a href="#">机甲动画</a></li>
+                        <li><a href="#">科幻经典</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                        <li><a href="#">版权声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 铁人视界. All Rights Reserved. 本站内容仅供学习交流，相关资源版权归原作者所有。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
